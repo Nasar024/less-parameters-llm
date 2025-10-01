@@ -4,9 +4,10 @@ Read the full [Saving 77\% of the Parameters in Large Language Models Technical 
 ## Abstract
 This technical report demonstrates that large language models (LLMs) can maintain their learning capacity while reducing their non-embedding parameters by up to 77\%. We achieve this by adapting a parameter reduction technique originally developed for computer vision, replacing dense layers with an optimized subnetwork that contains grouped pointwise convolutions. Using a 2-layer phi-3-mini-4k-instruct codebase from Microsoft as our baseline, we show that our optimized model (kphi-3) achieves comparable validation loss while using only 15-23\% of the original non-embedding parameters. Each experiment was conducted on a single NVIDIA L4 GPU within a 3-day timeframe, supporting the democratization of AI research. Our findings suggest that current LLM architectures may be substantially overparameterized, opening possibilities for more efficient model training and deployment.
 
-## Intro Video
-[![Watch the video](/src/video-banner.jpg?raw=true)](https://youtu.be/9tVawS-2rUw)
+## Intro Videos
+  [![Watch the video](/src/video-banner.jpg?raw=true)](https://youtu.be/9tVawS-2rUw)
 
+  [![Watch the video](/src/banner-bigger-smarter.png?raw=true)](https://youtu.be/EIaU1rWXV0g)
 ## Key Findings
 - Achieved 77% parameter reduction while maintaining model performance.
 - Demonstrated better generalization in optimized models.
