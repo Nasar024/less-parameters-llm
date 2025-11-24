@@ -1,0 +1,85 @@
+Nama : Muh.Nasar
+Nim : D0224035
+
+
+MariaDB [TOKO_JUNI]> SELECT * FROM produk
+    -> WHERE harga > 10000;
++-----------+-------------+--------+------+
+| id_produk | nama_produk | harga  | stok |
++-----------+-------------+--------+------+
+|         8 | Binder      |  15000 |   25 |
+|         9 | Stabilo     |  12000 |   45 |
+|        11 | Crayon      |  20000 |   20 |
+|        12 | Kertas HVS  |  35000 |   15 |
+|        14 | Kalkulator  |  45000 |   10 |
+|        15 | Tas Sekolah | 100000 |   15 |
++-----------+-------------+--------+------+
+6 rows in set (0.001 sec)
+
+MariaDB [TOKO_JUNI]> SELECT * FROM pelanggan
+    -> WHERE alamat = 'Bandung';
++--------------+------+---------+------------+
+| id_pelanggan | nama | alamat  | no_hp      |
++--------------+------+---------+------------+
+|            2 | Budi | Bandung | 0812222222 |
++--------------+------+---------+------------+
+1 row in set (0.000 sec)
+
+MariaDB [TOKO_JUNI]> SELECT * FROM transaksi
+    -> WHERE id_pelanggan = 5;
++--------------+--------------+-----------+--------+------------+
+| id_transaksi | id_pelanggan | id_produk | jumlah | tanggal    |
++--------------+--------------+-----------+--------+------------+
+|            5 |            5 |         5 |      2 | 2025-01-12 |
++--------------+--------------+-----------+--------+------------+
+1 row in set (0.000 sec)
+
+MariaDB [TOKO_JUNI]> SELECT * FROM produk
+    -> WHERE harga BETWEEN 5000 AND 20000;
++-----------+-------------+-------+------+
+| id_produk | nama_produk | harga | stok |
++-----------+-------------+-------+------+
+|         2 | Pulpen      |  5000 |   60 |
+|         3 | Buku Tulis  |  7000 |   40 |
+|         6 | Spidol      |  8000 |   30 |
+|         8 | Binder      | 15000 |   25 |
+|         9 | Stabilo     | 12000 |   45 |
+|        10 | Kuas        |  6000 |   35 |
+|        11 | Crayon      | 20000 |   20 |
+|        13 | Lakban      |  5000 |   50 |
++-----------+-------------+-------+------+
+8 rows in set (0.000 sec)
+
+MariaDB [TOKO_JUNI]> SELECT * FROM transaksi
+    -> WHERE tanggal BETWEEN '2025-01-12' AND '2025-01-15';
++--------------+--------------+-----------+--------+------------+
+| id_transaksi | id_pelanggan | id_produk | jumlah | tanggal    |
++--------------+--------------+-----------+--------+------------+
+|            4 |            4 |         2 |      3 | 2025-01-12 |
+|            5 |            5 |         5 |      2 | 2025-01-12 |
+|            6 |            6 |         9 |      1 | 2025-01-13 |
+|            7 |            7 |         4 |      4 | 2025-01-14 |
+|            8 |            8 |         6 |      2 | 2025-01-14 |
+|            9 |            9 |        10 |      1 | 2025-01-15 |
+|           10 |           10 |         8 |      2 | 2025-01-15 |
++--------------+--------------+-----------+--------+------------+
+7 rows in set (0.000 sec)
+
+MariaDB [TOKO_JUNI]> SELECT * FROM produk
+    -> WHERE stok BETWEEN 20 AND 60;
++-----------+-------------+-------+------+
+| id_produk | nama_produk | harga | stok |
++-----------+-------------+-------+------+
+|         1 | Pensil      |  3000 |   50 |
+|         2 | Pulpen      |  5000 |   60 |
+|         3 | Buku Tulis  |  7000 |   40 |
+|         6 | Spidol      |  8000 |   30 |
+|         8 | Binder      | 15000 |   25 |
+|         9 | Stabilo     | 12000 |   45 |
+|        10 | Kuas        |  6000 |   35 |
+|        11 | Crayon      | 20000 |   20 |
+|        13 | Lakban      |  5000 |   50 |
++-----------+-------------+-------+------+
+9 rows in set (0.000 sec)
+
+MariaDB [TOKO_JUNI]>
